@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'CloudFormation template for EC2 instance creation'
+
+Resources:
+  EC2Instance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      ImageId: nicoimage3
+      InstanceType: t2.micro
+      SecurityGroupIds: 
+        - sg-083f608b6cbc8d9cc
+      Tags:
+        - Key: Name
+          Value: EC2-Instance-from-CloudFormation 
